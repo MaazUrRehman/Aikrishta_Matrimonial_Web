@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "nodemailer": "^9.0.3",
+    "react-phone-number-input": "^3.4.17"
+  },
+  "devDependencies": {
+    "@types/react-phone-number-input": "^3.0.17"
+  }
+}

@@ -1,0 +1,9 @@
+export const API_ROUTES = {
+  LOGIN: "/auth/login",
+
+  REGISTER: "/auth/register",
+
+  LOGOUT: "/auth/logout",
+
+  PROFILE: "/users/profile",
+};
