@@ -106,12 +106,12 @@ export default function ContactProfessionalCard({ data }) {
   if (!data) return null;
 
   const fields = [
-    { label: 'City', value: data.city, icon: '📍' },
-    { label: 'Country', value: data.country, icon: '🌍' },
-    { label: 'Education Level', value: data.education_level, icon: '🎓' },
-    { label: 'Occupation', value: data.occupation, icon: '💼' },
-    { label: 'Monthly Income', value: data.monthly_income ? `$${data.monthly_income.toLocaleString()}` : '-', icon: '💰' },
-    { label: 'Additional Details', value: data.additional_details, icon: '📝' },
+    { label: 'City', value: data.city },
+    { label: 'Country', value: data.country },
+    { label: 'Education Level', value: data.education_level },
+    { label: 'Occupation', value: data.occupation },
+    { label: 'Monthly Income', value: data.monthly_income ? `$${data.monthly_income.toLocaleString()}` : '-' },
+    { label: 'Additional Details', value: data.additional_details },
   ];
 
   return (
@@ -120,7 +120,6 @@ export default function ContactProfessionalCard({ data }) {
         {fields.map((field, index) => (
           field.value && field.value !== '-' && (
             <div key={index} style={styles.item}>
-              <span style={styles.icon}>{field.icon}</span>
               <span style={styles.label}>{field.label}</span>
               <span style={styles.value}>{field.value}</span>
             </div>
@@ -133,7 +132,7 @@ export default function ContactProfessionalCard({ data }) {
 
 const styles = {
   container: {
-    padding: SPACING[4],
+    padding: SPACING[3],
     backgroundColor: 'rgba(255,255,255,0.02)',
     borderRadius: BORDER_RADIUS['2xl'],
   },
@@ -141,14 +140,14 @@ const styles = {
   grid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-    gap: SPACING[2],
+    gap: SPACING[1],
   },
 
   item: {
     display: 'flex',
     flexDirection: 'column',
     gap: SPACING[0.5],
-    padding: SPACING[3],
+    padding: SPACING[2],
     backgroundColor: 'rgba(255,255,255,0.02)',
     borderRadius: BORDER_RADIUS.lg,
     border: `1px solid rgba(255,255,255,0.04)`,

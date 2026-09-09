@@ -783,7 +783,7 @@ export default function PartnerPreferenceForm() {
         )}
 
         <form style={styles.form}>
-          <div style={styles.fieldsGrid}>
+          <div className="responsive-form-grid" style={styles.fieldsGrid}>
             {/* Age Range */}
             <div style={styles.inputGroup}>
               <label style={styles.label}>

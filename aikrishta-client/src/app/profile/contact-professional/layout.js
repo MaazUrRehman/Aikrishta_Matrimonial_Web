@@ -1,0 +1,2 @@
+export const metadata = { title: "Contact and Professional Information", description: "Manage contact and professional details on your AIKRISHTA profile.", robots: { index: false, follow: false } };
+export default function ContactProfessionalLayout({ children }) { return children; }

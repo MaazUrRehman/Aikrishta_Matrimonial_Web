@@ -157,6 +157,7 @@ export default function UserBasicInfoModal({ isOpen, onClose, data, userId }) {
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.9, opacity: 0, y: 20 }}
         transition={{ duration: 0.3 }}
+        className="responsive-modal"
         style={styles.modal}
         onClick={(e) => e.stopPropagation()}
       >
@@ -183,7 +184,7 @@ export default function UserBasicInfoModal({ isOpen, onClose, data, userId }) {
 
         <div style={styles.content}>
           {hasData ? (
-            <div style={styles.infoGrid}>
+            <div className="responsive-info-grid" style={styles.infoGrid}>
               <div style={styles.infoItem}>
                 <span style={styles.label}>Full Name</span>
                 <span style={styles.value}>{data.fullName || 'N/A'}</span>

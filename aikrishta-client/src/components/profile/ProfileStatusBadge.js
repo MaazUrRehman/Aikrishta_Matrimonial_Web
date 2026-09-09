@@ -44,43 +44,43 @@ export default function ProfileStatusBadge({ status, profileActivation }) {
 
   const statusConfig = {
     'Approved': {
-      label: '✅ Verified',
+      label: 'Verified',
       color: '#22C55E',
       bg: 'rgba(34, 197, 94, 0.12)',
       borderColor: 'rgba(34, 197, 94, 0.2)',
     },
     'Pending': {
-      label: '⏳ Pending',
+      label: 'Pending',
       color: COLORS.accent,
       bg: 'rgba(201, 169, 110, 0.12)',
       borderColor: 'rgba(201, 169, 110, 0.2)',
     },
     'Under Review': {
-      label: '🔄 Under Review',
+      label: 'Under Review',
       color: '#60A5FA',
       bg: 'rgba(96, 165, 250, 0.12)',
       borderColor: 'rgba(96, 165, 250, 0.2)',
     },
     'Rejected': {
-      label: '❌ Rejected',
+      label: 'Rejected',
       color: '#EF4444',
       bg: 'rgba(239, 68, 68, 0.12)',
       borderColor: 'rgba(239, 68, 68, 0.2)',
     },
     'Phone Pending': {
-      label: '📱 Phone Pending',
+      label: 'Phone Pending',
       color: COLORS.accent,
       bg: 'rgba(201, 169, 110, 0.12)',
       borderColor: 'rgba(201, 169, 110, 0.2)',
     },
     'Email Pending': {
-      label: '✉️ Email Pending',
+      label: 'Email Pending',
       color: COLORS.accent,
       bg: 'rgba(201, 169, 110, 0.12)',
       borderColor: 'rgba(201, 169, 110, 0.2)',
     },
     'Documents Pending': {
-      label: '📄 Documents Pending',
+      label: 'Documents Pending',
       color: COLORS.accent,
       bg: 'rgba(201, 169, 110, 0.12)',
       borderColor: 'rgba(201, 169, 110, 0.2)',

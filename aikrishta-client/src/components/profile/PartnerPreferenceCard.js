@@ -106,13 +106,13 @@ export default function PartnerPreferenceCard({ data }) {
   if (!data) return null;
 
   const fields = [
-    { label: 'Preferred Age', value: data.preferred_age_min && data.preferred_age_max ? `${data.preferred_age_min} - ${data.preferred_age_max} yrs` : '-', icon: '🎂' },
-    { label: 'Preferred Education', value: data.preferred_education, icon: '🎓' },
-    { label: 'Preferred Profession', value: data.preferred_profession, icon: '💼' },
-    { label: 'Preferred Marital Status', value: data.preferred_marital_status, icon: '💍' },
-    { label: 'Preferred Caste', value: data.preferred_caste, icon: '👥' },
-    { label: 'Preferred City', value: data.preferred_city, icon: '📍' },
-    { label: 'Preferred Country', value: data.preferred_country, icon: '🌍' },
+    { label: 'Preferred Age', value: data.preferred_age_min && data.preferred_age_max ? `${data.preferred_age_min} - ${data.preferred_age_max} yrs` : '-' },
+    { label: 'Preferred Education', value: data.preferred_education },
+    { label: 'Preferred Profession', value: data.preferred_profession },
+    { label: 'Preferred Marital Status', value: data.preferred_marital_status },
+    { label: 'Preferred Caste', value: data.preferred_caste },
+    { label: 'Preferred City', value: data.preferred_city },
+    { label: 'Preferred Country', value: data.preferred_country },
   ];
 
   return (
@@ -121,7 +121,6 @@ export default function PartnerPreferenceCard({ data }) {
         {fields.map((field, index) => (
           field.value && field.value !== '-' && (
             <div key={index} style={styles.item}>
-              <span style={styles.icon}>{field.icon}</span>
               <span style={styles.label}>{field.label}</span>
               <span style={styles.value}>{field.value}</span>
             </div>
@@ -134,7 +133,7 @@ export default function PartnerPreferenceCard({ data }) {
 
 const styles = {
   container: {
-    padding: SPACING[4],
+    padding: SPACING[3],
     backgroundColor: 'rgba(255,255,255,0.02)',
     borderRadius: BORDER_RADIUS['2xl'],
   },
@@ -142,14 +141,14 @@ const styles = {
   grid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-    gap: SPACING[2],
+    gap: SPACING[1],
   },
 
   item: {
     display: 'flex',
     flexDirection: 'column',
     gap: SPACING[0.5],
-    padding: SPACING[3],
+    padding: SPACING[2],
     backgroundColor: 'rgba(255,255,255,0.02)',
     borderRadius: BORDER_RADIUS.lg,
     border: `1px solid rgba(255,255,255,0.04)`,

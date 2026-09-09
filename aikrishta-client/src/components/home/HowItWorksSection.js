@@ -55,12 +55,11 @@ export default function HowItWorksSection() {
   ];
 
   return (
-    <section style={styles.section}>
+    <section id="how-it-works" style={styles.section}>
       <div style={styles.overlay}></div>
       <div style={styles.container}>
         {/* Header */}
         <div style={styles.header}>
-          <span style={styles.badge}>✦ How It Works</span>
           <h2 style={styles.title}>
             Let Our Experts <br />
             <span style={styles.highlight}>Find the One for You!</span>
@@ -248,7 +247,7 @@ const styles = {
 
   cardHover: {
     transform: 'translateY(-16px) scale(1.03)',
-    boxShadow: `0 40px 80px rgba(0,0,0,0.4)`,
+    boxShadow: `0 8px 25px rgba(201, 169, 110, 0.25)`,
     borderWidth: '2px',
     borderStyle: 'solid',
     borderColor: COLORS.accent,

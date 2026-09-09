@@ -866,7 +866,7 @@ export default function FamilyBackgroundForm() {
         )}
 
         <form style={styles.form}>
-          <div style={styles.fieldsGrid}>
+          <div className="responsive-form-grid" style={styles.fieldsGrid}>
             {/* Father Name */}
             <div style={styles.inputGroup}>
               <label style={styles.label}>
@@ -973,7 +973,7 @@ export default function FamilyBackgroundForm() {
             <span style={styles.sectionTitle}>👨‍👩‍👧‍👦 Siblings Information</span>
           </div>
 
-          <div style={styles.fieldsGrid}>
+          <div className="responsive-form-grid" style={styles.fieldsGrid}>
             {/* Brothers Count */}
             <div style={styles.inputGroup}>
               <label style={styles.label}>
@@ -1079,7 +1079,7 @@ export default function FamilyBackgroundForm() {
             </div>
           </div>
 
-          <div style={styles.fieldsGrid}>
+          <div className="responsive-form-grid" style={styles.fieldsGrid}>
             {/* Social Status - Fixed Dropdown */}
             <div style={styles.inputGroup}>
               <label style={styles.label}>

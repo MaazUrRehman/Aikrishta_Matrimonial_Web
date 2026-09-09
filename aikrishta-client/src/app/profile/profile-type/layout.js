@@ -1,0 +1,2 @@
+export const metadata = { title: "Choose Profile Type", description: "Set up the profile type for your AIKRISHTA matrimonial account.", robots: { index: false, follow: false } };
+export default function ProfileTypeLayout({ children }) { return children; }

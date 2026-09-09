@@ -1,0 +1,2 @@
+export const metadata = { title: "Verification Status", description: "Check the verification status of your AIKRISHTA matrimonial profile.", robots: { index: false, follow: false } };
+export default function VerificationStatusLayout({ children }) { return children; }

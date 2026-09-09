@@ -1,205 +1,3 @@
-// // src/components/common/Footer.js
-// 'use client';
-
-// import Link from 'next/link';
-// import { COLORS, TYPOGRAPHY, SPACING } from '@/constants/theme';
-
-// export default function Footer() {
-//   return (
-//     <footer style={styles.footer}>
-//       <div style={styles.container}>
-//         {/* Quick Links */}
-//         <div style={styles.links}>
-//           <div style={styles.linkGroup}>
-//             <h4 style={styles.linkTitle}>Quick Links</h4>
-//             <Link href="/about" style={styles.link}>About Us</Link>
-//             <Link href="/how-it-works" style={styles.link}>How It Works</Link>
-//             <Link href="/success-stories" style={styles.link}>Success Stories</Link>
-//             <Link href="/membership" style={styles.link}>Membership</Link>
-//             <Link href="/blog" style={styles.link}>Blog</Link>
-//             <Link href="/contact" style={styles.link}>Contact</Link>
-//           </div>
-
-//           <div style={styles.linkGroup}>
-//             <h4 style={styles.linkTitle}>Support</h4>
-//             <Link href="/help" style={styles.link}>Help Center</Link>
-//             <Link href="/privacy" style={styles.link}>Privacy Policy</Link>
-//             <Link href="/safety" style={styles.link}>Safety Tips</Link>
-//             <Link href="/terms" style={styles.link}>Terms & Conditions</Link>
-//           </div>
-
-//           <div style={styles.linkGroup}>
-//             <h4 style={styles.linkTitle}>For Members</h4>
-//             <Link href="/auth/login" style={styles.link}>Login</Link>
-//             <Link href="/auth/register" style={styles.link}>Create Account</Link>
-//             <Link href="/premium" style={styles.link}>Premium Membership</Link>
-//             <Link href="/benefits" style={styles.link}>Member Benefits</Link>
-//           </div>
-
-//           <div style={styles.linkGroup}>
-//             <h4 style={styles.linkTitle}>Stay Updated</h4>
-//             <p style={styles.subscribeText}>
-//               Subscribe to get latest updates, success stories and offers.
-//             </p>
-//             <div style={styles.subscribeBox}>
-//               <input
-//                 type="email"
-//                 placeholder="Enter your email"
-//                 style={styles.subscribeInput}
-//               />
-//               <button style={styles.subscribeBtn}>→</button>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Bottom */}
-//       <div style={styles.bottom}>
-//         <div style={styles.bottomContainer}>
-//           <p style={styles.copyright}>
-//             © {new Date().getFullYear()} AIKRISHTA. All rights reserved.
-//             Made with ❤️ for meaningful connections.
-//           </p>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// }
-
-// // ==================== STYLES ====================
-
-// const styles = {
-//   footer: {
-//     backgroundColor: COLORS.primary,
-//     color: COLORS.textWhite,
-//     padding: `${SPACING[12]} 0 ${SPACING[6]}`,
-//   },
-
-//   container: {
-//     maxWidth: '1280px',
-//     margin: '0 auto',
-//     padding: `0 ${SPACING[6]}`,
-//     marginBottom: SPACING[8],
-//   },
-
-//   links: {
-//     display: 'grid',
-//     gridTemplateColumns: 'repeat(4, 1fr)',
-//     gap: SPACING[8],
-//   },
-
-//   linkGroup: {
-//     display: 'flex',
-//     flexDirection: 'column',
-//     gap: SPACING[2],
-//   },
-
-//   linkTitle: {
-//     fontFamily: TYPOGRAPHY.fontFamily.heading,
-//     fontSize: TYPOGRAPHY.fontSize.base,
-//     fontWeight: TYPOGRAPHY.fontWeight.bold,
-//     color: COLORS.textWhite,
-//     marginBottom: SPACING[1],
-//   },
-
-//   link: {
-//     color: 'rgba(255,255,255,0.6)',
-//     textDecoration: 'none',
-//     fontFamily: TYPOGRAPHY.fontFamily.body,
-//     fontSize: TYPOGRAPHY.fontSize.sm,
-//     transition: 'all 0.3s ease',
-//   },
-
-//   subscribeText: {
-//     fontFamily: TYPOGRAPHY.fontFamily.body,
-//     fontSize: TYPOGRAPHY.fontSize.sm,
-//     color: 'rgba(255,255,255,0.6)',
-//     lineHeight: TYPOGRAPHY.lineHeight.relaxed,
-//   },
-
-//   subscribeBox: {
-//     display: 'flex',
-//     alignItems: 'center',
-//     marginTop: SPACING[2],
-//     backgroundColor: 'rgba(255,255,255,0.1)',
-//     borderRadius: '50px',
-//     overflow: 'hidden',
-//     border: '1px solid rgba(255,255,255,0.1)',
-//   },
-
-//   subscribeInput: {
-//     flex: 1,
-//     padding: `${SPACING[2]} ${SPACING[4]}`,
-//     backgroundColor: 'transparent',
-//     border: 'none',
-//     outline: 'none',
-//     color: COLORS.textWhite,
-//     fontFamily: TYPOGRAPHY.fontFamily.body,
-//     fontSize: TYPOGRAPHY.fontSize.sm,
-//   },
-
-//   subscribeInputPlaceholder: {
-//     color: 'rgba(255,255,255,0.4)',
-//   },
-
-//   subscribeBtn: {
-//     padding: `${SPACING[2]} ${SPACING[4]}`,
-//     backgroundColor: COLORS.secondary,
-//     color: COLORS.textWhite,
-//     border: 'none',
-//     cursor: 'pointer',
-//     fontSize: TYPOGRAPHY.fontSize.lg,
-//     transition: 'all 0.3s ease',
-//   },
-
-//   bottom: {
-//     borderTop: '1px solid rgba(255,255,255,0.1)',
-//     paddingTop: SPACING[6],
-//   },
-
-//   bottomContainer: {
-//     maxWidth: '1280px',
-//     margin: '0 auto',
-//     padding: `0 ${SPACING[6]}`,
-//     textAlign: 'center',
-//   },
-
-//   copyright: {
-//     fontFamily: TYPOGRAPHY.fontFamily.body,
-//     fontSize: TYPOGRAPHY.fontSize.sm,
-//     color: 'rgba(255,255,255,0.4)',
-//   },
-// };
-
-// // Add hover styles to globals.css
-// /*
-// .footer-link:hover {
-//   color: ${COLORS.accent} !important;
-// }
-// .subscribe-btn:hover {
-//   transform: scale(1.05);
-// }
-// */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 'use client';
 
@@ -224,7 +22,7 @@ export default function Footer() {
     <footer style={styles.footer}>
       <div style={styles.container}>
         {/* Main Footer Grid */}
-        <div style={styles.grid}>
+        <div className="footer-grid" style={styles.grid}>
           {/* Brand Section */}
           <div style={styles.brandSection}>
             <div style={styles.logo}>
@@ -234,33 +32,31 @@ export default function Footer() {
               </span>
             </div>
             <p style={styles.brandDesc}>
-              Trusted matchmaking platform helping thousands find their perfect life partner. 
+              Trusted matchmaking platform helping thousands find their perfect life partner.
+              We connect genuine people from around the world and make it easier to discover
+              meaningful relationships based on compatibility, trust, and shared values.
               Your journey to a meaningful relationship starts here.
             </p>
-            <div style={styles.trustBadges}>
-              <span style={styles.trustBadge}>✓ 100% Verified</span>
-              <span style={styles.trustBadge}>✓ Secure & Safe</span>
-              <span style={styles.trustBadge}>✓ Privacy First</span>
-            </div>
           </div>
 
           {/* Quick Links */}
           <div style={styles.linkGroup}>
             <h4 style={styles.linkTitle}>Quick Links</h4>
-            <Link href="/about" style={styles.link}>About Us</Link>
-            <Link href="/how-it-works" style={styles.link}>How It Works</Link>
-            <Link href="/success-stories" style={styles.link}>Success Stories</Link>
-            <Link href="/membership" style={styles.link}>Membership</Link>
+            <Link href="/dashboard#premium-features" style={styles.link}>Premium Features</Link>
+            <Link href="/dashboard#choose-your-preference" style={styles.link}>Choose Your Preference</Link>
+            <Link href="/dashboard#success-stories" style={styles.link}>Success Stories</Link>
+            <Link href="/dashboard#how-it-works" style={styles.link}>How It Works</Link>
+            <Link href="/dashboard#what-we-offer" style={styles.link}>What We Offer</Link>
           </div>
 
           {/* Features */}
           <div style={styles.linkGroup}>
             <h4 style={styles.linkTitle}>Features</h4>
-            <Link href="/ai-match" style={styles.link}>AI Matchmaking</Link>
-            <Link href="/chat" style={styles.link}>Secure Chat</Link>
-            <Link href="/horoscope" style={styles.link}>Horoscope Matching</Link>
-            <Link href="/profile-boost" style={styles.link}>Profile Boosting</Link>
-            <Link href="/filters" style={styles.link}>Match Filters</Link>
+            <Link href="/user-profiles" style={styles.link}>AI Matchmaking</Link>
+            <Link href="/user-profiles" style={styles.link}>Secure Chat</Link>
+            <Link href="/user-profiles" style={styles.link}>Horoscope Matching</Link>
+            <Link href="/user-profiles" style={styles.link}>Authentic Profiles</Link>
+            <Link href="/user-profiles" style={styles.link}>Match Filters</Link>
           </div>
 
           {/* Support */}
@@ -275,56 +71,48 @@ export default function Footer() {
           {/* For Members */}
           <div style={styles.linkGroup}>
             <h4 style={styles.linkTitle}>For Members</h4>
-            <Link href="/premium" style={styles.link}>Premium Membership</Link>
-            <Link href="/video-call" style={styles.link}>Video Call</Link>
-            <Link href="/voice-call" style={styles.link}>Voice Call</Link>
-            <Link href="/profile-boost" style={styles.link}>Profile Boosting</Link>
-            <Link href="/profile-boost" style={styles.link}>Match Recommendation</Link>
+            <Link href="/user-profiles" style={styles.link}>Video Call</Link>
+            <Link href="/user-profiles" style={styles.link}>Voice Call</Link>
+            <Link href="/user-profiles" style={styles.link}>Match Recommendation</Link>
           </div>
         </div>
 
-        
+
 
         {/* Security & Trust Section */}
         <div style={styles.securitySection}>
-          <div style={styles.securityGrid}>
+          <div className="footer-security-grid" style={styles.securityGrid}>
             <div style={styles.securityItem}>
-              <span style={styles.securityIcon}>🔒</span>
               <div>
                 <h5 style={styles.securityTitle}>Completely Secure</h5>
                 <p style={styles.securityDesc}>Your data is encrypted and 100% secure</p>
               </div>
             </div>
             <div style={styles.securityItem}>
-              <span style={styles.securityIcon}>✅</span>
               <div>
                 <h5 style={styles.securityTitle}>Verified Profiles</h5>
                 <p style={styles.securityDesc}>Every profile is manually verified</p>
               </div>
             </div>
             <div style={styles.securityItem}>
-              <span style={styles.securityIcon}>🟢</span>
               <div>
                 <h5 style={styles.securityTitle}>Active Members</h5>
                 <p style={styles.securityDesc}>Thousands of active members online</p>
               </div>
             </div>
             <div style={styles.securityItem}>
-              <span style={styles.securityIcon}>📸</span>
               <div>
                 <h5 style={styles.securityTitle}>Image Privacy</h5>
                 <p style={styles.securityDesc}>Your images are secure & private</p>
               </div>
             </div>
             <div style={styles.securityItem}>
-              <span style={styles.securityIcon}>🎯</span>
               <div>
                 <h5 style={styles.securityTitle}>Smart Filters</h5>
                 <p style={styles.securityDesc}>Advanced filters for perfect matches</p>
               </div>
             </div>
             <div style={styles.securityItem}>
-              <span style={styles.securityIcon}>📊</span>
               <div>
                 <h5 style={styles.securityTitle}>Match Recommendations</h5>
                 <p style={styles.securityDesc}>AI-powered match suggestions</p>
@@ -337,10 +125,10 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div style={styles.bottom}>
         <div style={styles.bottomContainer}>
-          <div style={styles.bottomContent}>
+          <div className="footer-bottom-content" style={styles.bottomContent}>
             <p style={styles.copyright}>
               © {new Date().getFullYear()} AIKRISHTA. All rights reserved.
-              Made with <span style={styles.heart}>❤️</span> for meaningful connections.
+              Made with love for meaningful connections.
             </p>
             <div style={styles.bottomLinks}>
               <Link href="/legal" style={styles.bottomLink}>Privacy</Link>

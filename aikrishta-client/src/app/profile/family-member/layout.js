@@ -1,0 +1,2 @@
+export const metadata = { title: "Family Member Information", description: "Manage family member information on your AIKRISHTA profile.", robots: { index: false, follow: false } };
+export default function FamilyMemberLayout({ children }) { return children; }

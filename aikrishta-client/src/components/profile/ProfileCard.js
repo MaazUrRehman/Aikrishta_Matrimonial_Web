@@ -221,19 +221,16 @@ export default function ProfileCard({ personalInfo, profileType, verification, c
           <div style={styles.details}>
             {age && (
               <span style={styles.detailItem}>
-                <span style={styles.detailIcon}>🎂</span>
                 {age} years
               </span>
             )}
             {location && (
               <span style={styles.detailItem}>
-                <span style={styles.detailIcon}>📍</span>
                 {location}
               </span>
             )}
             {gender && (
               <span style={styles.detailItem}>
-                <span style={styles.detailIcon}>{gender === 'female' ? '♀' : '♂'}</span>
                 {gender}
               </span>
             )}
@@ -243,31 +240,26 @@ export default function ProfileCard({ personalInfo, profileType, verification, c
           <div style={styles.tags}>
             {religion && (
               <span style={styles.tag}>
-                <span style={styles.tagIcon}>🕌</span>
                 {religion}
               </span>
             )}
             {caste && (
               <span style={styles.tag}>
-                <span style={styles.tagIcon}>👥</span>
                 {caste}
               </span>
             )}
             {marital_status && (
               <span style={styles.tag}>
-                <span style={styles.tagIcon}>💍</span>
                 {marital_status}
               </span>
             )}
             {isVerified && (
               <span style={{...styles.tag, ...styles.tagVerified}}>
-                <span style={styles.tagIcon}>✅</span>
                 Verified
               </span>
             )}
             {profileType?.profile_for && (
               <span style={styles.tag}>
-                <span style={styles.tagIcon}>👤</span>
                 {profileType.profile_for}
               </span>
             )}
@@ -280,14 +272,14 @@ export default function ProfileCard({ personalInfo, profileType, verification, c
 
 const styles = {
   container: {
-    marginBottom: SPACING[4],
+    marginBottom: SPACING[3],
   },
 
   card: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: SPACING[8],
+    padding: SPACING[6],
     backgroundColor: 'rgba(255,255,255,0.04)',
     borderRadius: BORDER_RADIUS['2xl'],
     border: `1px solid rgba(255,255,255,0.06)`,
@@ -299,7 +291,7 @@ const styles = {
 
   imageContainer: {
     flexShrink: 0,
-    marginBottom: SPACING[4],
+    marginBottom: SPACING[3],
     position: 'relative',
   },
 
@@ -368,15 +360,15 @@ const styles = {
     fontSize: TYPOGRAPHY.fontSize['3xl'],
     fontWeight: TYPOGRAPHY.fontWeight.bold,
     color: COLORS.textWhite,
-    marginBottom: SPACING[2],
+    marginBottom: SPACING[1],
   },
 
   details: {
     display: 'flex',
     justifyContent: 'center',
-    gap: SPACING[4],
+    gap: SPACING[2],
     flexWrap: 'wrap',
-    marginBottom: SPACING[3],
+    marginBottom: SPACING[2],
     fontFamily: TYPOGRAPHY.fontFamily.body,
     fontSize: TYPOGRAPHY.fontSize.base,
     color: 'rgba(255,255,255,0.6)',
@@ -395,15 +387,15 @@ const styles = {
   tags: {
     display: 'flex',
     justifyContent: 'center',
-    gap: SPACING[2],
+    gap: SPACING[1],
     flexWrap: 'wrap',
   },
 
   tag: {
     display: 'flex',
     alignItems: 'center',
-    gap: SPACING[1],
-    padding: `${SPACING[1]} ${SPACING[4]}`,
+    gap: 0,
+    padding: `${SPACING[1]} ${SPACING[3]}`,
     backgroundColor: 'rgba(255,255,255,0.04)',
     borderRadius: BORDER_RADIUS.full,
     fontSize: TYPOGRAPHY.fontSize.sm,

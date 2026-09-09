@@ -1512,7 +1512,7 @@ export default function AdminVerificationDetail({ userId }) {
                   <div style={styles.fraudReport}>
                     <h4 style={styles.fraudTitle}>AI Fraud Detection Report</h4>
                     {/* ✅ 6 items in single row */}
-                    <div style={styles.fraudGridSingle}>
+                    <div className="responsive-fraud-grid" style={styles.fraudGridSingle}>
                       <div style={styles.fraudItem}>
                         <span style={styles.fraudLabel}>Overall Risk</span>
                         <span style={{

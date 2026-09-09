@@ -226,7 +226,7 @@ export default function UserProfileDetail({ profile, currentUserPersonal }) {
         permissionStatus={permissionStatus} 
       />
       
-      <div style={styles.sectionsGrid}>
+      <div className="profile-sections-grid" style={styles.sectionsGrid}>
         <PersonalInformation data={personalInfo} />
         <ContactProfessional data={contactProfessional} />
         <FamilyBackground data={familyBackground} />

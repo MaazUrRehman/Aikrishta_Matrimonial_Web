@@ -15,9 +15,9 @@ export default function PremiumSection() {
           <circle cx="12" cy="12" r="3"/>
         </svg>
       ),
-      title: 'View Contact Details',
-      desc: 'Get direct access to contact information of your matches',
-      profit: 'Connect instantly with potential partners',
+      title: 'Verified Profiles',
+      desc: 'Browse profiles that go through the platform verification process.',
+      profit: 'Build connections with greater confidence',
     },
     {
       icon: (
@@ -28,9 +28,9 @@ export default function PremiumSection() {
           <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
         </svg>
       ),
-      title: 'Profile Viewers',
-      desc: 'See who viewed your profile and show interest',
-      profit: 'Know who is interested in you',
+      title: 'Advanced Profile Search',
+      desc: 'Use profile filters and recommendations to discover compatible people.',
+      profit: 'Find relevant matches more easily',
     },
     {
       icon: (
@@ -40,9 +40,9 @@ export default function PremiumSection() {
           <path d="M2 12l10 5 10-5"/>
         </svg>
       ),
-      title: 'Priority Listing',
-      desc: 'Get featured at the top of search results',
-      profit: '100x more visibility to potential matches',
+      title: 'AI Matchmaking',
+      desc: 'Explore AI-powered matching based on available profile information.',
+      profit: 'Discover compatibility-focused suggestions',
     },
     {
       icon: (
@@ -53,9 +53,9 @@ export default function PremiumSection() {
           <path d="M16 10h.01"/>
         </svg>
       ),
-      title: 'Expert Matchmaking',
-      desc: 'Personalized guidance from relationship experts',
-      profit: 'Get expert advice for your perfect match',
+      title: 'Private Chat',
+      desc: 'Connect with matches through the platform chat experience.',
+      profit: 'Keep conversations in one place',
     },
     {
       icon: (
@@ -68,9 +68,9 @@ export default function PremiumSection() {
           <path d="M18 12v5"/>
         </svg>
       ),
-      title: 'Profile Boost',
-      desc: 'Boost your profile to get more attention',
-      profit: 'Increase your match requests by 300%',
+      title: 'Voice & Video Calls',
+      desc: 'Use voice and video calling to connect with matches directly.',
+      profit: 'Meet face-to-face when you are ready',
     },
     {
       icon: (
@@ -82,39 +82,39 @@ export default function PremiumSection() {
           <line x1="12" y1="2" x2="12" y2="7"/>
         </svg>
       ),
-      title: 'Advanced Filters',
-      desc: 'Access to premium filters for better matches',
-      profit: 'Find your perfect match faster',
+      title: 'Horoscope Compatibility',
+      desc: 'Review horoscope information as part of your compatibility journey.',
+      profit: 'Add another perspective to your search',
     },
   ];
 
   return (
-    <section style={styles.section}>
+    <section id="what-we-offer" className="premium-section" style={styles.section}>
       <div style={styles.overlay}></div>
       <div style={styles.container}>
         {/* Header */}
         <div style={styles.header}>
-          <span style={styles.badge}>✦ Premium Membership</span>
-          <h2 style={styles.heading}>
-            Unlock Your <span style={styles.highlight}>Perfect Match</span>
+          <h2 className="premium-heading" style={styles.heading}>
+            Tools for <span style={styles.highlight}>Meaningful Connections</span>
           </h2>
-          <p style={styles.subheading}>
-            Upgrade to premium and get access to exclusive features that help you find your life partner faster
+          <p className="premium-subheading" style={styles.subheading}>
+            Explore the features that help you discover, evaluate, and connect with potential life partners.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div style={styles.grid}>
+        <div className="premium-grid" style={styles.grid}>
           {premiumFeatures.map((feature, index) => {
             const isHovered = hoveredIndex === index;
             return (
               <div
                 key={index}
+                className="premium-card-wrapper"
                 style={styles.cardWrapper}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <div style={{
+                <div className="premium-card" style={{
                   ...styles.card,
                   ...(isHovered && styles.cardHover),
                 }}>
@@ -163,37 +163,6 @@ export default function PremiumSection() {
           })}
         </div>
 
-        {/* Trust Badges */}
-        <div style={styles.trustSection}>
-          <div style={styles.trustItem}>
-            <span style={styles.trustIcon}>🔒</span>
-            <div>
-              <h4 style={styles.trustTitle}>Secure & Safe</h4>
-              <p style={styles.trustDesc}>Your data is encrypted and 100% secure</p>
-            </div>
-          </div>
-          <div style={styles.trustItem}>
-            <span style={styles.trustIcon}>✅</span>
-            <div>
-              <h4 style={styles.trustTitle}>Strict Verification</h4>
-              <p style={styles.trustDesc}>Every profile goes through strict verification</p>
-            </div>
-          </div>
-          <div style={styles.trustItem}>
-            <span style={styles.trustIcon}>👥</span>
-            <div>
-              <h4 style={styles.trustTitle}>Trusted by Thousands</h4>
-              <p style={styles.trustDesc}>Thousands of happy members trust our platform</p>
-            </div>
-          </div>
-          <div style={styles.trustItem}>
-            <span style={styles.trustIcon}>🎯</span>
-            <div>
-              <h4 style={styles.trustTitle}>Expert Guidance</h4>
-              <p style={styles.trustDesc}>Our experts are always here to help you</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -300,7 +269,7 @@ const styles = {
 
   cardHover: {
     transform: 'translateY(-12px) scale(1.03)',
-    boxShadow: `0 30px 60px rgba(0,0,0,0.4)`,
+    boxShadow: `0 8px 25px rgba(201, 169, 110, 0.35)`,
     borderWidth: '2px',
     borderStyle: 'solid',
     borderColor: COLORS.accent,

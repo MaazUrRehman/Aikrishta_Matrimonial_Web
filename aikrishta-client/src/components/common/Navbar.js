@@ -17,6 +17,7 @@ export default function Navbar() {
   const [user, setUser] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [verificationStatus, setVerificationStatus] = useState(null);
   const [profileData, setProfileData] = useState({
     profileType: null,
@@ -165,6 +166,10 @@ export default function Navbar() {
 
   const navLinks = isAdmin ? adminNavLinks : userNavLinks;
 
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
   // ✅ Check if link is active
   const isActive = (href) => {
     if (href === '/dashboard' && pathname === '/dashboard') return true;
@@ -179,7 +184,7 @@ export default function Navbar() {
 
   return (
     <nav style={styles.navbar}>
-      <div style={styles.container}>
+      <div className="navbar-container" style={styles.container}>
         <Link href={isAdmin ? "/admin/dashboard" : "/"} style={styles.logo}>
           <div style={styles.logoImageWrapper}>
             <Image
@@ -194,7 +199,19 @@ export default function Navbar() {
 
         </Link>
 
-        <div style={styles.navLinks}>
+        <button
+          className="mobile-menu-toggle"
+          type="button"
+          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isMobileMenuOpen}
+          onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div className="nav-links" style={styles.navLinks}>
           {navLinks.map((link, index) => {
             const active = isActive(link.href);
             return (
@@ -213,17 +230,36 @@ export default function Navbar() {
           })}
         </div>
 
-        <div style={styles.rightSection}>
+        {isMobileMenuOpen && (
+          <div className="mobile-nav-menu">
+            {navLinks.map((link, index) => {
+              const active = isActive(link.href);
+              return (
+                <Link
+                  key={index}
+                  href={link.href}
+                  className={active ? 'mobile-nav-link mobile-nav-link-active' : 'mobile-nav-link'}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </div>
+        )}
+
+        <div className="navbar-right-section" style={styles.rightSection}>
           {user ? (
             <div style={styles.userSection} ref={dropdownRef}>
               <button
+                className="user-btn"
                 style={styles.userBtn}
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
-                <div style={styles.avatar}>
+                <div className="avatar" style={styles.avatar}>
                   {user.fullName?.charAt(0).toUpperCase() || 'U'}
                 </div>
-                <span style={styles.userName}>{user.fullName?.split(' ')[0]}</span>
+                <span className="user-name" style={styles.userName}>{user.fullName?.split(' ')[0]}</span>
                 <span style={styles.dropdownArrow}>▼</span>
               </button>
 
@@ -290,7 +326,7 @@ export default function Navbar() {
               )}
             </div>
           ) : (
-            <div style={styles.authButtons}>
+            <div className="auth-buttons" style={styles.authButtons}>
               <Link href="/auth/login" style={styles.loginBtn}>
                 Login
               </Link>
@@ -575,8 +611,96 @@ const responsiveStyles = `
   }
 
   @media (max-width: 1024px) {
+    .navbar-container {
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+    }
+
+    .nav-links {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      gap: 0.75rem !important;
+      overflow-x: auto;
+      padding-bottom: 0.25rem;
+      scrollbar-width: thin;
+    }
+
+    .nav-links a {
+      white-space: nowrap;
+    }
+  }
+
+  .mobile-menu-toggle,
+  .mobile-nav-menu {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .navbar-container {
+      position: relative;
+      flex-wrap: nowrap;
+    }
+
     .nav-links {
       display: none !important;
+    }
+
+    .mobile-menu-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 42px;
+      height: 42px;
+      margin-left: auto;
+      padding: 8px;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .mobile-menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: ${COLORS.textWhite};
+      border-radius: 2px;
+    }
+
+    .mobile-nav-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 0.75rem 1rem 1rem;
+      background: ${COLORS.primary};
+      border-top: 1px solid ${COLORS.secondary}40;
+      border-bottom: 2px solid ${COLORS.secondary}60;
+      box-shadow: 0 16px 30px rgba(0,0,0,0.35);
+      z-index: 1100;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 0.75rem 0.5rem;
+      color: rgba(255,255,255,0.8);
+      font-family: ${TYPOGRAPHY.fontFamily.body};
+      font-size: ${TYPOGRAPHY.fontSize.sm};
+      font-weight: ${TYPOGRAPHY.fontWeight.medium};
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .mobile-nav-link:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-nav-link-active {
+      color: ${COLORS.accent};
     }
   }
 
@@ -587,6 +711,11 @@ const responsiveStyles = `
   }
 
   @media (max-width: 640px) {
+    .navbar-container {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
     .logo-image {
       height: 50px !important;
     }

@@ -91,7 +91,6 @@ export default function ProfilesHeader({ totalCount }) {
   return (
     <div style={styles.header}>
       <div style={styles.left}>
-        <span style={styles.badge}>✦ Find Your Match</span>
         <h1 style={styles.title}>
           Available <span style={styles.highlight}>Profiles</span>
         </h1>
@@ -133,7 +132,7 @@ const styles = {
     color: COLORS.accent,
     textTransform: 'uppercase',
     letterSpacing: '0.1em',
-    padding: `${SPACING[1]} ${SPACING[4]}`,
+    padding: `${SPACING[3]} ${SPACING[4]}`,
     border: `1px solid ${COLORS.accent}30`,
     borderRadius: '9999px',
     width: 'fit-content',

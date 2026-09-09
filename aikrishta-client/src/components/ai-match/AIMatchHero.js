@@ -53,16 +53,7 @@ export default function AIMatchHero({ onFetchMatches, loading, hasFetched }) {
           transition={{ duration: 0.6 }}
           style={styles.content}
         >
-          {/* Badge */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            style={styles.badge}
-          >
-            <Sparkles size={16} style={styles.badgeIcon} />
-            <span>AI-Powered Matchmaking</span>
-          </motion.div>
+          
 
           {/* Heading */}
           <motion.h1 
@@ -88,64 +79,7 @@ export default function AIMatchHero({ onFetchMatches, loading, hasFetched }) {
             of happy couples worldwide.
           </motion.p>
 
-          {/* CTA Button */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            style={styles.ctaWrapper}
-          >
-            {!hasFetched && (
-              <motion.button 
-                onClick={onFetchMatches} 
-                disabled={loading} 
-                style={styles.ctaButton}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = `0 8px 40px rgba(139, 30, 63, 0.5)`;
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = `0 4px 20px rgba(139, 30, 63, 0.3)`;
-                }}
-              >
-                {loading ? (
-                  <>
-                    <span style={styles.spinner}></span>
-                    Analyzing Matches...
-                  </>
-                ) : (
-                  <>
-                    <Sparkles size={20} />
-                    Discover Your Matches
-                  </>
-                )}
-              </motion.button>
-            )}
-            {hasFetched && (
-              <motion.button 
-                onClick={onFetchMatches} 
-                disabled={loading} 
-                style={styles.refreshBtn}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {loading ? (
-                  <>
-                    <span style={styles.spinner}></span>
-                    Refreshing...
-                  </>
-                ) : (
-                  <>
-                    <TrendingUp size={20} />
-                    Refresh Matches
-                  </>
-                )}
-              </motion.button>
-            )}
-            <span style={styles.ctaNote}>✨ Free AI match analysis</span>
-          </motion.div>
-
+          
           
         </motion.div>
 
@@ -177,28 +111,7 @@ export default function AIMatchHero({ onFetchMatches, loading, hasFetched }) {
           ))}
         </motion.div>
 
-        {/* Trust Indicators */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.6 }}
-          style={styles.trustSection}
-        >
-          <div style={styles.trustItem}>
-            <Shield size={18} style={styles.trustIcon} />
-            <span>100% Secure & Private</span>
-          </div>
-          <div style={styles.trustDivider}></div>
-          <div style={styles.trustItem}>
-            <Users size={18} style={styles.trustIcon} />
-            <span>Trusted by 50,000+ Members</span>
-          </div>
-          <div style={styles.trustDivider}></div>
-          <div style={styles.trustItem}>
-            <Star size={18} style={styles.trustIcon} />
-            <span>4.8/5 User Rating</span>
-          </div>
-        </motion.div>
+       
       </div>
     </section>
   );
@@ -207,10 +120,12 @@ export default function AIMatchHero({ onFetchMatches, loading, hasFetched }) {
 const styles = {
   section: {
     position: 'relative',
-    padding: `${SPACING[12]} ${SPACING[6]}`,
-    background: `linear-gradient(180deg, ${COLORS.primaryDark} 0%, ${COLORS.primary} 60%, ${COLORS.primary} 100%)`,
+    padding: `${SPACING[12]} ${SPACING[8]}`,
+    background: `radial-gradient(circle at center, rgba(5, 18, 41, 0.94) 0%, rgba(10, 25, 47, 0.78) 38%, rgba(10, 25, 47, 0.38) 75%, rgba(10, 25, 47, 0.18) 100%), url('/images/ai-match-bg-hero-img.png') center / cover no-repeat`,
+    width: '100vw',
+    marginLeft: 'calc(50% - 50vw)',
     overflow: 'hidden',
-    borderRadius: BORDER_RADIUS['2xl'],
+    borderRadius: 0,
     marginBottom: SPACING[8],
     border: `1px solid rgba(255,255,255,0.04)`,
   },
@@ -285,6 +200,7 @@ const styles = {
     fontSize: TYPOGRAPHY.fontSize['5xl'],
     fontWeight: TYPOGRAPHY.fontWeight.bold,
     color: COLORS.textWhite,
+    marginTop: SPACING[8],
     marginBottom: SPACING[4],
     lineHeight: 1.2,
     fontFamily: TYPOGRAPHY.fontFamily.heading,

@@ -96,13 +96,13 @@ export default function PersonalInfoCard({ data }) {
   if (!data) return null;
 
   const fields = [
-    { label: 'Religion', value: data.religion, icon: '🕌' },
-    { label: 'Caste', value: data.caste, icon: '👥' },
-    { label: 'Height', value: data.height ? `${data.height}'` : '-', icon: '📏' },
-    { label: 'Age', value: data.age, icon: '🎂' },
-    { label: 'Gender', value: data.gender, icon: data.gender === 'female' ? '♀' : '♂' },
-    { label: 'Marital Status', value: data.marital_status, icon: '💍' },
-    { label: 'Mother Tongue', value: data.mother_tongue, icon: '🗣️' },
+    { label: 'Religion', value: data.religion },
+    { label: 'Caste', value: data.caste },
+    { label: 'Height', value: data.height ? `${data.height}'` : '-' },
+    { label: 'Age', value: data.age },
+    { label: 'Gender', value: data.gender },
+    { label: 'Marital Status', value: data.marital_status },
+    { label: 'Mother Tongue', value: data.mother_tongue },
   ];
 
   return (
@@ -111,7 +111,6 @@ export default function PersonalInfoCard({ data }) {
         {fields.map((field, index) => (
           field.value && field.value !== '-' && (
             <div key={index} style={styles.item}>
-              <span style={styles.icon}>{field.icon}</span>
               <span style={styles.label}>{field.label}</span>
               <span style={styles.value}>{field.value}</span>
             </div>
@@ -124,7 +123,7 @@ export default function PersonalInfoCard({ data }) {
 
 const styles = {
   container: {
-    padding: SPACING[4],
+    padding: SPACING[3],
     backgroundColor: 'rgba(255,255,255,0.02)',
     borderRadius: BORDER_RADIUS['2xl'],
   },
@@ -132,14 +131,14 @@ const styles = {
   grid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-    gap: SPACING[2],
+    gap: SPACING[1],
   },
 
   item: {
     display: 'flex',
     flexDirection: 'column',
     gap: SPACING[0.5],
-    padding: SPACING[3],
+    padding: SPACING[2],
     backgroundColor: 'rgba(255,255,255,0.02)',
     borderRadius: BORDER_RADIUS.lg,
     border: `1px solid rgba(255,255,255,0.04)`,

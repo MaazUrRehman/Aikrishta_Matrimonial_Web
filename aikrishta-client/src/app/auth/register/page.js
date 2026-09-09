@@ -4,6 +4,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { COLORS, TYPOGRAPHY, SPACING, SHADOWS, BORDER_RADIUS } from '@/constants/theme';
@@ -73,7 +74,13 @@ export default function RegisterPage() {
         style={styles.card}
       >
         <div style={styles.header}>
-          <span style={styles.logo}>✦</span>
+          <Image
+            src="/images/aikrishta-logo.png"
+            alt="AIKrishta Logo"
+            width={88}
+            height={88}
+            style={styles.logo}
+          />
           <h1 style={styles.title}>Create <span style={styles.highlight}>Account</span></h1>
           <p style={styles.subtitle}>Start your journey to find the perfect match</p>
         </div>
@@ -246,10 +253,12 @@ const styles = {
     marginBottom: SPACING[8],
   },
   logo: {
-    fontSize: TYPOGRAPHY.fontSize['4xl'],
+    width: 'clamp(64px, 18vw, 88px)',
+    height: 'clamp(64px, 18vw, 88px)',
+    objectFit: 'contain',
     display: 'block',
+    margin: '0 auto',
     marginBottom: SPACING[2],
-    color: COLORS.accent,
   },
   title: {
     fontFamily: TYPOGRAPHY.fontFamily.heading,

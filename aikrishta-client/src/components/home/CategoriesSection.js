@@ -86,12 +86,11 @@ export default function CategoriesSection() {
   ];
 
   return (
-    <section style={styles.section}>
+    <section id="choose-your-preference" style={styles.section}>
       <div style={styles.overlay}></div>
       <div style={styles.container}>
         {/* Header */}
         <div style={styles.header}>
-          <span style={styles.badge}>✦ Choose Your Preference</span>
           <h2 style={styles.heading}>
             Find Your <span style={styles.highlight}>Perfect Match</span>
           </h2>

@@ -1,0 +1,2 @@
+export const metadata = { title: "Personal Information", description: "Add personal information to your AIKRISHTA matrimonial profile.", robots: { index: false, follow: false } };
+export default function PersonalInformationLayout({ children }) { return children; }

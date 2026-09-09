@@ -219,6 +219,7 @@ export default function UserFamilyMembersModal({ isOpen, onClose, data, userId }
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.9, opacity: 0, y: 20 }}
         transition={{ duration: 0.3 }}
+        className="responsive-modal"
         style={styles.modal}
         onClick={(e) => e.stopPropagation()}
       >

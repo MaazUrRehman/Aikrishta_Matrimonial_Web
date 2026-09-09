@@ -9,78 +9,79 @@ export default function SuccessStoriesSection() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const stories = [
-    {
-      name: 'Ayesha & Farhan',
-      story: '"AIKRISHTA.com made our dreams come true. We found not just a match, but a beautiful life together."',
-      image: '/images/success-story-1.jpeg',
-      location: 'Lahore, Pakistan',
-    },
-    {
-      name: 'Zara & Usman',
-      story: '"We are grateful for finding each other through such a wonderful platform. Forever thankful!"',
-      image: '/images/success-story-2.jpeg',
-      location: 'Karachi, Pakistan',
-    },
-    {
-      name: 'Sara & Ali',
-      story: '"The best decision we made was to trust AIKRISHTA. Forever thankful for bringing us together."',
-      image: '/images/success-story-3.jpeg',
-      location: 'Islamabad, Pakistan',
-    },
-    {
-      name: 'Fatima & Hassan',
-      story: '"We found our perfect match through AIKRISHTA. A truly life-changing experience!"',
-      image: '/images/success-story-4.jpeg',
-      location: 'Dubai, UAE',
-    },
-    {
-      name: 'Mariam & Bilal',
-      story: '"The AI matchmaking helped us find each other. We couldn\'t be happier with our journey."',
-      image: '/images/success-story-5.jpeg',
-      location: 'London, UK',
-    },
-    {
-      name: 'Hira & Imran',
-      story: '"We were looking for the right partner and AIKRISHTA made it possible. A beautiful journey!"',
-      image: '/images/success-story-6.jpeg',
-      location: 'Toronto, Canada',
-    },
-  ];
+{
+name: 'Ayesha & Farhan',
+story: '"AIKRISHTA.com brought us together when we least expected it. We found a wonderful connection and built a beautiful life together."',
+image: '/images/success-story-1.jpeg',
+location: 'Lahore, Pakistan',
+},
+{
+name: 'Priya & Arjun',
+story: '"We connected through AIKRISHTA and discovered how naturally our dreams and values aligned. We are so grateful for this journey."',
+image: '/images/success-story-2.jpeg',
+location: 'Mumbai, India',
+},
+{
+name: 'Emily & Daniel',
+story: '"AIKRISHTA helped us find someone who truly understood us. What started as a simple connection became something truly special."',
+image: '/images/success-story-3.jpeg',
+location: 'London, UK',
+},
+{
+name: 'Sara & Michael',
+story: '"We found each other through AIKRISHTA and never imagined that one connection could change our lives so beautifully."',
+image: '/images/success-story-4.jpeg',
+location: 'Toronto, Canada',
+},
+{
+name: 'Fatima & Hassan',
+story: '"AIKRISHTA made the search feel simple and meaningful. We found the right person and began a journey we will always cherish."',
+image: '/images/success-story-5.jpeg',
+location: 'Dubai, UAE',
+},
+{
+name: 'Sofia & Christopher',
+story: '"Finding each other on AIKRISHTA was the beginning of an incredible journey. We are thankful every day for the connection we made."',
+image: '/images/success-story-6.jpeg',
+location: 'New York, USA',
+},
+];
+
 
   return (
-    <section style={styles.section}>
+    <section id="success-stories" className="success-stories-section" style={styles.section}>
       <div style={styles.overlay}></div>
       <div style={styles.container}>
         {/* Header */}
         <div style={styles.header}>
-          <span style={styles.badge}>✦ Real Love Stories</span>
-          <h2 style={styles.heading}>
+          <h2 className="success-stories-heading" style={styles.heading}>
             Real Stories, <span style={styles.highlight}>Real Connections</span>
           </h2>
-          <p style={styles.subheading}>
+          <p className="success-stories-subheading" style={styles.subheading}>
             Discover beautiful love stories of couples who found their perfect match through AIKRISHTA
           </p>
         </div>
 
         {/* Stories Grid - 2 Columns */}
-        <div style={styles.grid}>
+        <div className="success-stories-grid" style={styles.grid}>
           {stories.map((story, index) => {
             const isHovered = hoveredIndex === index;
             return (
               <div
                 key={index}
+                className="success-stories-card-wrapper"
                 style={styles.cardWrapper}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <div style={{
+                <div className="success-stories-card" style={{
                   ...styles.card,
                   ...(isHovered && styles.cardHover),
                 }}>
-                  <div style={styles.cardInner}>
+                  <div className="success-stories-card-inner" style={styles.cardInner}>
                     {/* Image */}
                     <div style={styles.imageWrapper}>
-                      <div style={{
+                      <div className="success-stories-image-container" style={{
                         ...styles.imageContainer,
                         ...(isHovered && styles.imageContainerHover),
                       }}>
@@ -94,7 +95,7 @@ export default function SuccessStoriesSection() {
                             ...(isHovered && styles.imageHover),
                           }}
                         />
-                        <div style={styles.quoteIcon}>“</div>
+                        <div className="success-stories-quote-icon" style={styles.quoteIcon}>“</div>
                       </div>
                     </div>
 
@@ -106,7 +107,7 @@ export default function SuccessStoriesSection() {
                       }}>
                         {story.story}
                       </p>
-                      <div style={styles.nameWrapper}>
+                      <div className="success-stories-name-wrapper" style={styles.nameWrapper}>
                         <h4 style={{
                           ...styles.name,
                           ...(isHovered && styles.nameHover),

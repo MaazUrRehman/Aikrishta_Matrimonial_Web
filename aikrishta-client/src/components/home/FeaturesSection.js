@@ -11,11 +11,11 @@ export default function FeaturesSection() {
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2a10 10 0 1 0 10 10 10 10 0 0 0-10-10z"/>
-          <path d="M12 6v6l4 2"/>
-          <path d="M12 22v-4"/>
-          <path d="M6 12h4"/>
-          <path d="M18 12h-2"/>
+          <path d="M12 2a10 10 0 1 0 10 10 10 10 0 0 0-10-10z" />
+          <path d="M12 6v6l4 2" />
+          <path d="M12 22v-4" />
+          <path d="M6 12h4" />
+          <path d="M18 12h-2" />
         </svg>
       ),
       title: 'AI Matchmaking',
@@ -24,37 +24,36 @@ export default function FeaturesSection() {
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-          <path d="M2 17l10 5 10-5"/>
-          <path d="M2 12l10 5 10-5"/>
-          <path d="M12 22v-5"/>
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+          <path d="M8 11h6" />
+          <path d="M11 8v6" />
         </svg>
       ),
-      title: 'Premium Membership',
-      desc: 'Unlock exclusive features, view contact details, and get priority listing.',
+      title: 'Recommended Matches',
+      desc: 'Discover personalized match recommendations based on your preferences and compatibility.',
     },
-
 
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-          <circle cx="12" cy="7" r="4"/>
-          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          <path d="M8 3.13a4 4 0 0 0 0 7.75"/>
-          <line x1="12" y1="2" x2="12" y2="7"/>
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          <path d="M8 3.13a4 4 0 0 0 0 7.75" />
+          <line x1="12" y1="2" x2="12" y2="7" />
         </svg>
       ),
-      title: 'Smart Filters & Recommendations',
+      title: 'Smart Filters',
       desc: 'Advanced filters and AI-powered recommendations for your perfect match.',
     },
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-          <path d="M8 10h.01"/>
-          <path d="M12 10h.01"/>
-          <path d="M16 10h.01"/>
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          <path d="M8 10h.01" />
+          <path d="M12 10h.01" />
+          <path d="M16 10h.01" />
         </svg>
       ),
       title: 'Secure Chats',
@@ -63,14 +62,14 @@ export default function FeaturesSection() {
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
-          <line x1="8" y1="2" x2="8" y2="22"/>
-          <line x1="16" y1="2" x2="16" y2="22"/>
-          <line x1="2" y1="8" x2="22" y2="8"/>
-          <line x1="2" y1="16" x2="22" y2="16"/>
-          <path d="M8 2 L16 2"/>
-          <path d="M8 22 L16 22"/>
-          <circle cx="12" cy="12" r="2"/>
+          <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
+          <line x1="8" y1="2" x2="8" y2="22" />
+          <line x1="16" y1="2" x2="16" y2="22" />
+          <line x1="2" y1="8" x2="22" y2="8" />
+          <line x1="2" y1="16" x2="22" y2="16" />
+          <path d="M8 2 L16 2" />
+          <path d="M8 22 L16 22" />
+          <circle cx="12" cy="12" r="2" />
         </svg>
       ),
       title: 'Voice & Video Calls',
@@ -79,9 +78,9 @@ export default function FeaturesSection() {
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          <path d="M2 12h20"/>
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          <path d="M2 12h20" />
         </svg>
       ),
       title: 'Horoscope Matching',
@@ -90,24 +89,24 @@ export default function FeaturesSection() {
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-          <path d="M2 17l10 5 10-5"/>
-          <path d="M2 12l10 5 10-5"/>
-          <path d="M12 22v-5"/>
-          <path d="M6 12v5"/>
-          <path d="M18 12v5"/>
-          <path d="M6 7v3"/>
-          <path d="M18 7v3"/>
+          <path d="M12 2L2 7l10 5 10-5-10-5z" />
+          <path d="M2 17l10 5 10-5" />
+          <path d="M2 12l10 5 10-5" />
+          <path d="M12 22v-5" />
+          <path d="M6 12v5" />
+          <path d="M18 12v5" />
+          <path d="M6 7v3" />
+          <path d="M18 7v3" />
         </svg>
       ),
-      title: 'Profile Boosting',
-      desc: 'Boost your profile visibility and get noticed by more potential matches.',
+      title: 'Authentic Profiles',
+      desc: 'Connect with genuine profiles for a safer trustworthy experience.',
     },
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-          <polyline points="22 4 12 14.01 9 11.01"/>
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+          <polyline points="22 4 12 14.01 9 11.01" />
         </svg>
       ),
       title: 'Verified Profiles',
@@ -116,12 +115,11 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section style={styles.section}>
+    <section id="premium-features" style={styles.section}>
       <div style={styles.overlay}></div>
       <div style={styles.container}>
         {/* Header */}
         <div style={styles.header}>
-          <span style={styles.badge}>✦ Premium Features</span>
           <h2 style={styles.heading}>
             Everything You Need for <span style={styles.highlight}>Perfect Matchmaking</span>
           </h2>
@@ -178,7 +176,7 @@ export default function FeaturesSection() {
           })}
         </div>
 
-        
+
       </div>
     </section>
   );

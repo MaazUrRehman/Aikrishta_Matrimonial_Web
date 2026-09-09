@@ -15,7 +15,7 @@ export default function ProtectedRoute({ children }) {
     
     // Check if the user is attempting to access a protected route
     // Protected routes are those that are NOT under /auth/
-    const isPublicRoute = pathname.startsWith('/auth/');
+    const isPublicRoute = pathname === '/' || pathname.startsWith('/auth/');
     
     if (!user && !isPublicRoute) {
       router.push('/auth/login');

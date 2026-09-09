@@ -701,7 +701,6 @@ export default function ProfilePage() {
           <div style={styles.progressSection}>
             <div style={styles.progressHeader}>
               <span style={styles.progressLabel}>
-                <span style={styles.progressIcon}>📊</span>
                 Profile Completion
               </span>
               <span style={styles.progressPercentage}>{completionPercentage}%</span>
@@ -763,7 +762,6 @@ export default function ProfilePage() {
               <div style={styles.sectionWrapper}>
                 <div style={styles.sectionHeader}>
                   <h3 style={styles.sectionTitle}>
-                    <span style={styles.sectionIcon}>👤</span>
                     Personal Information
                   </h3>
                   <button
@@ -805,7 +803,6 @@ export default function ProfilePage() {
               <div style={styles.sectionWrapper}>
                 <div style={styles.sectionHeader}>
                   <h3 style={styles.sectionTitle}>
-                    <span style={styles.sectionIcon}>📞</span>
                     Contact & Professional
                   </h3>
                   <button
@@ -847,7 +844,6 @@ export default function ProfilePage() {
               <div style={styles.sectionWrapper}>
                 <div style={styles.sectionHeader}>
                   <h3 style={styles.sectionTitle}>
-                    <span style={styles.sectionIcon}>👨‍👩‍👧‍👦</span>
                     Family Background
                   </h3>
                   <button
@@ -889,7 +885,6 @@ export default function ProfilePage() {
               <div style={styles.sectionWrapper}>
                 <div style={styles.sectionHeader}>
                   <h3 style={styles.sectionTitle}>
-                    <span style={styles.sectionIcon}>💑</span>
                     Partner Preference
                   </h3>
                   <button
@@ -960,7 +955,7 @@ export default function ProfilePage() {
 const styles = {
   container: {
     minHeight: '100vh',
-    padding: `${SPACING[6]} ${SPACING[6]} ${SPACING[12]}`,
+    padding: `${SPACING[4]} ${SPACING[6]} ${SPACING[8]}`,
     background: `linear-gradient(180deg, ${COLORS.primaryDark} 0%, ${COLORS.primary} 50%, ${COLORS.primaryLight} 100%)`,
   },
 
@@ -969,15 +964,15 @@ const styles = {
     margin: '0 auto',
     backgroundColor: 'rgba(255,255,255,0.04)',
     borderRadius: BORDER_RADIUS['2xl'],
-    padding: SPACING[10],
+    padding: SPACING[6],
     backdropFilter: 'blur(10px)',
     border: `1px solid rgba(255,255,255,0.06)`,
     boxShadow: SHADOWS.xl,
   },
 
   progressSection: {
-    marginBottom: SPACING[6],
-    padding: SPACING[4],
+    marginBottom: SPACING[4],
+    padding: SPACING[3],
     backgroundColor: 'rgba(255,255,255,0.03)',
     borderRadius: BORDER_RADIUS['2xl'],
     border: `1px solid rgba(255,255,255,0.04)`,
@@ -1046,14 +1041,14 @@ const styles = {
   },
 
   statusSection: {
-    marginBottom: SPACING[6],
+    marginBottom: SPACING[4],
   },
 
   sections: {
     display: 'flex',
     flexDirection: 'column',
-    gap: SPACING[4],
-    marginBottom: SPACING[6],
+    gap: SPACING[3],
+    marginBottom: SPACING[4],
   },
 
   sectionWrapper: {
@@ -1071,7 +1066,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: `${SPACING[3]} ${SPACING[4]}`,
+    padding: `${SPACING[2]} ${SPACING[3]}`,
     backgroundColor: 'rgba(255,255,255,0.02)',
     borderBottom: `1px solid rgba(255,255,255,0.04)`,
   },

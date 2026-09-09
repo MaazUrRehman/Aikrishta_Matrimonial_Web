@@ -749,7 +749,7 @@ export default function ContactProfessionalForm() {
         )}
 
         <form style={styles.form}>
-          <div style={styles.fieldsGrid}>
+          <div className="responsive-form-grid" style={styles.fieldsGrid}>
             {/* City */}
             <div style={styles.inputGroup}>
               <label style={styles.label}>

@@ -1,0 +1,2 @@
+export const metadata = { title: "Family Background", description: "Add family background details to your AIKRISHTA matrimonial profile.", robots: { index: false, follow: false } };
+export default function FamilyBackgroundLayout({ children }) { return children; }

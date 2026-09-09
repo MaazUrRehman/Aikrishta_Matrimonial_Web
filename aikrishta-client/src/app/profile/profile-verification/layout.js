@@ -1,0 +1,2 @@
+export const metadata = { title: "Profile Verification", description: "Submit and manage verification details for your AIKRISHTA matrimonial profile.", robots: { index: false, follow: false } };
+export default function ProfileVerificationLayout({ children }) { return children; }

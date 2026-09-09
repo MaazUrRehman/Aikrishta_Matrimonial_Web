@@ -702,7 +702,7 @@ export default function FamilyMemberForm() {
         )}
 
         <form style={styles.form}>
-          <div style={styles.fieldsGrid}>
+          <div className="responsive-form-grid" style={styles.fieldsGrid}>
             {/* First Name */}
             <div style={styles.inputGroup}>
               <label style={styles.label}>

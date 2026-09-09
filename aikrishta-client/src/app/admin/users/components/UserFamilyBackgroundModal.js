@@ -316,6 +316,7 @@ export default function UserFamilyBackgroundModal({ isOpen, onClose, data, userI
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.9, opacity: 0, y: 20 }}
         transition={{ duration: 0.3 }}
+        className="responsive-modal"
         style={styles.modal}
         onClick={(e) => e.stopPropagation()}
       >
@@ -348,7 +349,7 @@ export default function UserFamilyBackgroundModal({ isOpen, onClose, data, userI
                   <span style={styles.sectionIcon}>👨‍👩‍👦</span>
                   Parents
                 </h3>
-                <div style={styles.infoGrid}>
+                <div className="responsive-info-grid" style={styles.infoGrid}>
                   {parentsFields.map((field, index) => (
                     <div key={index} style={styles.infoItem}>
                       <span style={styles.label}>{field.label}</span>

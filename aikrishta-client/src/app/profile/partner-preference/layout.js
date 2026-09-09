@@ -1,0 +1,2 @@
+export const metadata = { title: "Partner Preferences", description: "Set your preferred partner details for more relevant AIKRISHTA matches.", robots: { index: false, follow: false } };
+export default function PartnerPreferenceLayout({ children }) { return children; }

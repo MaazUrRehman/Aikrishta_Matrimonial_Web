@@ -1,88 +1,66 @@
 'use client';
 
-import Image from 'next/image';
 import { COLORS, TYPOGRAPHY, SPACING, SHADOWS, BORDER_RADIUS } from '@/constants/theme';
 
 export default function HeroSection({ user }) {
   return (
-    <section style={styles.hero}>
+    <section className="hero-section" style={styles.hero}>
       <div style={styles.overlay}></div>
-      <div style={styles.container}>
+      <div className="hero-container" style={styles.container}>
         {/* Left Content */}
         <div style={styles.content}>
           
 
-          <h1 style={styles.title}>
-            Find Your <span style={styles.highlight}>Perfect Match</span>
+          <h1 className="hero-title" style={styles.title}>
+            <span style={styles.meaningful}>Meaningful</span> Connections
+            <br />
+            <span style={styles.highlight}>Begin Here</span>
           </h1>
 
           <p style={styles.subtitle}>
-            We help you find a life partner who truly understands you.
-            <br />
-            Because your forever starts with the right connection.
+            A trusted place to meet people who share your values, faith, and hopes for the future.
+            {' '}Start a sincere conversation that can grow into a lasting relationship.
           </p>
 
           
           {/* Features with secondary color */}
-          <div style={styles.features}>
+          <div className="features" style={styles.features}>
             <div style={styles.featureItem}>
               <span style={styles.featureIcon}>✓</span>
-              <span style={styles.featureText}>100% Verified Profiles</span>
+                <span style={styles.featureText}>Safe & secure</span>
             </div>
             <div style={styles.featureItem}>
               <span style={styles.featureIcon}>✓</span>
-              <span style={styles.featureText}>Privacy & Data Protection</span>
+                <span style={styles.featureText}>Verified profiles</span>
             </div>
             <div style={styles.featureItem}>
               <span style={styles.featureIcon}>✓</span>
-              <span style={styles.featureText}>Expert Matchmaking</span>
+                <span style={styles.featureText}>A trusted community</span>
             </div>
             <div style={styles.featureItem}>
               <span style={styles.featureIcon}>✓</span>
-              <span style={styles.featureText}>Trusted by Thousands</span>
+                <span style={styles.featureText}>Meaningful connections</span>
             </div>
           </div>
 
-          <div style={styles.stats}>
+          <div className="stats" style={styles.stats}>
             <div style={styles.statItem}>
               <span style={styles.statNumber}>50K+</span>
-              <span style={styles.statLabel}>Successful Matches</span>
+                <span style={styles.statLabel}>Successful relationships</span>
             </div>
-            <div style={styles.statDivider}></div>
+            <div className="stat-divider" style={styles.statDivider}></div>
             <div style={styles.statItem}>
               <span style={styles.statNumber}>15K+</span>
-              <span style={styles.statLabel}>Happy Members</span>
+                <span style={styles.statLabel}>Members finding love</span>
             </div>
-            <div style={styles.statDivider}></div>
+            <div className="stat-divider" style={styles.statDivider}></div>
             <div style={styles.statItem}>
               <span style={styles.statNumber}>15+</span>
-              <span style={styles.statLabel}>Years of Trust</span>
+                <span style={styles.statLabel}>Years of trust</span>
             </div>
           </div>
         </div>
 
-        {/* Right Image */}
-        <div style={styles.imageWrapper}>
-          <div style={styles.imageContainer}>
-            <Image
-              src="/images/hero-image.jpg"
-              alt="Happy couple finding perfect match"
-              width={600}
-              height={700}
-              style={styles.image}
-              priority
-            />
-            {/* Floating badges with secondary color */}
-            <div style={styles.floatingBadge1}>
-              <span style={styles.badgeNumber}>50K+</span>
-              <span style={styles.badgeLabel}>Happy Couples</span>
-            </div>
-            <div style={styles.floatingBadge2}>
-              <span style={styles.badgeNumber}>24/7</span>
-              <span style={styles.badgeLabel}>Support Available</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -91,11 +69,11 @@ export default function HeroSection({ user }) {
 const styles = {
   hero: {
     position: 'relative',
-    minHeight: '100vh',
+    minHeight: '80vh',
     display: 'flex',
     alignItems: 'center',
     padding: `${SPACING[16]} 0`,
-    background: COLORS.gradients.hero,
+    background: `linear-gradient(90deg, rgba(5, 18, 41, 0.94) 0%, rgba(10, 25, 47, 0.82) 42%, rgba(10, 25, 47, 0.2) 100%), url('/images/home-bg-hero-img.png') center / cover no-repeat`,
     overflow: 'hidden',
   },
 
@@ -105,8 +83,7 @@ const styles = {
     left: 0,
     right: 0,
     bottom: 0,
-    // ✅ Secondary color overlay - now more visible
-    background: `radial-gradient(ellipse at 30% 50%, ${COLORS.secondary}20 0%, transparent 70%)`,
+    background: 'linear-gradient(90deg, rgba(5, 18, 41, 0.3) 0%, rgba(10, 25, 47, 0.18) 45%, transparent 100%)',
     zIndex: 1,
   },
 
@@ -116,8 +93,7 @@ const styles = {
     margin: '0 auto',
     padding: `0 ${SPACING[6]}`,
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    gap: SPACING[12],
+    gridTemplateColumns: '1fr',
     alignItems: 'center',
     position: 'relative',
     zIndex: 2,
@@ -156,11 +132,15 @@ const styles = {
 
   title: {
     fontFamily: TYPOGRAPHY.fontFamily.heading,
-    fontSize: TYPOGRAPHY.fontSize['6xl'],
+    fontSize: '3.625rem',
     fontWeight: TYPOGRAPHY.fontWeight.bold,
     color: COLORS.textWhite,
     lineHeight: TYPOGRAPHY.lineHeight.tight,
     margin: 0,
+  },
+
+  meaningful: {
+    fontSize: '1em',
   },
 
   highlight: {
@@ -272,8 +252,10 @@ const styles = {
   features: {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
-    gap: SPACING[3],
+    columnGap: SPACING[2],
+    rowGap: SPACING[2],
     width: '100%',
+    maxWidth: '500px',
     marginTop: SPACING[2],
   },
 

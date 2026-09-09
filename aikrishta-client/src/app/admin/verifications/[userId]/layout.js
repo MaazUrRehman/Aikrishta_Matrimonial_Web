@@ -1,0 +1,2 @@
+export const metadata = { title: "Verification Review", description: "Review a matrimonial profile verification submission in the AIKRISHTA admin area.", robots: { index: false, follow: false } };
+export default function AdminVerificationDetailLayout({ children }) { return children; }

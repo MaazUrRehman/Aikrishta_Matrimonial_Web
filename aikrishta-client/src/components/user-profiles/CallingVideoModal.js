@@ -49,7 +49,8 @@ const styles = {
     zIndex: 99999,
   },
   container: {
-    width: "380px",
+    width: "min(380px, calc(100vw - 2rem))",
+    maxWidth: "calc(100vw - 2rem)",
     background: COLORS.primary || "#0F172A",
     borderRadius: BORDER_RADIUS['2xl'] || "24px",
     padding: SPACING[8] || "32px",

@@ -69,7 +69,7 @@ export default function ProfileGrid({ profiles }) {
   }
 
   return (
-    <div style={styles.grid}>
+    <div className="profile-grid" style={styles.grid}>
       {profiles.map((profile) => (
         <ProfileCard key={profile._id || profile.id || Math.random()} profile={profile} />
       ))}
