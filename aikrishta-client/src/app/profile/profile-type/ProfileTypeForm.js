@@ -574,7 +574,7 @@ export default function ProfileTypeForm() {
           <h1 style={styles.title}>
             Profile <span style={styles.highlight}>Type</span>
           </h1>
-          <p style={styles.subtitle}>Step 1 of 7 • Choose who you're creating this profile for</p>
+          <p style={styles.subtitle}>Step 1 of 7 • Choose who you&apos;re creating this profile for</p>
           <div style={styles.stepIndicator}>
             <span style={styles.stepDotActive}></span>
             <span style={styles.stepDot}></span>

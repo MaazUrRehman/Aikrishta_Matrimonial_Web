@@ -22,7 +22,7 @@ export default function CTASection() {
             style={styles.input}
           />
           <Link href="/auth/register" style={styles.btn}>
-            Join Now - It's Free <span style={styles.arrow}>→</span>
+            Join Now - It&apos;s Free <span style={styles.arrow}>→</span>
           </Link>
         </div>
       </div>

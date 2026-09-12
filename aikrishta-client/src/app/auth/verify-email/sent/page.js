@@ -156,12 +156,12 @@ export default function VerifyEmailSentPage() {
         <div style={styles.icon}>✉️</div>
         <h1 style={styles.title}>Check Your <span style={styles.highlight}>Email</span></h1>
         <p style={styles.subtitle}>
-          We've sent a verification link to your email address.
+          We&apos;ve sent a verification link to your email address.
           Please click the link to verify your account.
         </p>
         <div style={styles.infoBox}>
           <p style={styles.infoText}>
-            📌 Didn't receive the email? Check your spam folder or
+            📌 Didn&apos;t receive the email? Check your spam folder or
           </p>
           <Link href="/auth/resend-verification" style={styles.resendLink}>
             Resend Verification Email

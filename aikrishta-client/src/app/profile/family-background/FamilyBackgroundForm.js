@@ -870,7 +870,7 @@ export default function FamilyBackgroundForm() {
             <div style={styles.inputGroup}>
               <label style={styles.label}>
                 <span style={styles.labelIcon}>👨</span>
-                Father's Name <span style={styles.required}>*</span>
+                Father&apos;s Name <span style={styles.required}>*</span>
               </label>
               <input
                 type="text"
@@ -895,7 +895,7 @@ export default function FamilyBackgroundForm() {
             <div style={styles.inputGroup}>
               <label style={styles.label}>
                 <span style={styles.labelIcon}>👩</span>
-                Mother's Name <span style={styles.required}>*</span>
+                Mother&apos;s Name <span style={styles.required}>*</span>
               </label>
               <input
                 type="text"
@@ -920,7 +920,7 @@ export default function FamilyBackgroundForm() {
             <div style={styles.inputGroup}>
               <label style={styles.label}>
                 <span style={styles.labelIcon}>💼</span>
-                Father's Profession <span style={styles.required}>*</span>
+                Father&apos;s Profession <span style={styles.required}>*</span>
               </label>
               <input
                 type="text"
@@ -945,7 +945,7 @@ export default function FamilyBackgroundForm() {
             <div style={styles.inputGroup}>
               <label style={styles.label}>
                 <span style={styles.labelIcon}>💼</span>
-                Mother's Profession <span style={styles.required}>*</span>
+                Mother&apos;s Profession <span style={styles.required}>*</span>
               </label>
               <input
                 type="text"
