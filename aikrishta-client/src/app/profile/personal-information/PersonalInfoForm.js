@@ -915,7 +915,6 @@ export default function PersonalInfoForm() {
     <div style={styles.container}>
       <div style={styles.card}>
         <div style={styles.header}>
-          <span style={styles.logo}>👤</span>
           <h1 style={styles.title}>
             Personal <span style={styles.highlight}>Information</span>
           </h1>
@@ -1418,6 +1417,7 @@ const styles = {
   },
 
   labelIcon: {
+    visibility: 'hidden',
     fontSize: TYPOGRAPHY.fontSize.base,
   },
 
@@ -1473,6 +1473,7 @@ const styles = {
   },
 
   selectArrow: {
+    visibility: 'hidden',
     position: 'absolute',
     right: '14px',
     top: '50%',

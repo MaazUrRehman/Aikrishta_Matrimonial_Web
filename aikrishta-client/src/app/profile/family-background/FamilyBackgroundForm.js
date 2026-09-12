@@ -835,7 +835,6 @@ export default function FamilyBackgroundForm() {
     <div style={styles.container}>
       <div style={styles.card}>
         <div style={styles.header}>
-          <span style={styles.logo}>👨‍👩‍👧‍👦</span>
           <h1 style={styles.title}>
             Family <span style={styles.highlight}>Background</span>
           </h1>
@@ -970,7 +969,7 @@ export default function FamilyBackgroundForm() {
 
           {/* Siblings Section */}
           <div style={styles.sectionDivider}>
-            <span style={styles.sectionTitle}>👨‍👩‍👧‍👦 Siblings Information</span>
+            <span style={styles.sectionTitle}> Siblings Information</span>
           </div>
 
           <div className="responsive-form-grid" style={styles.fieldsGrid}>
@@ -1337,6 +1336,7 @@ const styles = {
     gap: SPACING[1],
   },
   labelIcon: {
+    visibility: 'hidden',
     fontSize: TYPOGRAPHY.fontSize.base,
   },
   required: {
@@ -1388,6 +1388,7 @@ const styles = {
     },
   },
   selectArrow: {
+    visibility: 'hidden',
     position: 'absolute',
     right: '14px',
     top: '50%',

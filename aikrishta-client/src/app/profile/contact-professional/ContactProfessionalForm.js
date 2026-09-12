@@ -718,7 +718,6 @@ export default function ContactProfessionalForm() {
     <div style={styles.container}>
       <div style={styles.card}>
         <div style={styles.header}>
-          <span style={styles.logo}>💼</span>
           <h1 style={styles.title}>
             Contact & <span style={styles.highlight}>Professional</span>
           </h1>
@@ -1083,6 +1082,7 @@ const styles = {
     gap: SPACING[1],
   },
   labelIcon: {
+    visibility: 'hidden',
     fontSize: TYPOGRAPHY.fontSize.base,
   },
   required: {
@@ -1134,6 +1134,7 @@ const styles = {
     },
   },
   selectArrow: {
+    visibility: 'hidden',
     position: 'absolute',
     right: '14px',
     top: '50%',

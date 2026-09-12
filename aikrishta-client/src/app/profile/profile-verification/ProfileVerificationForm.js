@@ -1105,6 +1105,7 @@ const styles = {
     gap: SPACING[1],
   },
   labelIcon: {
+    visibility: 'hidden',
     fontSize: TYPOGRAPHY.fontSize.base,
   },
   required: {
@@ -1159,6 +1160,7 @@ const styles = {
     },
   },
   selectArrow: {
+    visibility: 'hidden',
     position: 'absolute',
     right: '14px',
     top: '50%',

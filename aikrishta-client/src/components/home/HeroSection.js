@@ -14,7 +14,7 @@ export default function HeroSection({ user }) {
           <h1 className="hero-title" style={styles.title}>
             <span style={styles.meaningful}>Meaningful</span> Connections
             <br />
-            <span style={styles.highlight}>Begin Here</span>
+            <span style={styles.highlight}>Begins Here</span>
           </h1>
 
           <p style={styles.subtitle}>

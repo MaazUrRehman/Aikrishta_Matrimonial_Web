@@ -87,7 +87,6 @@ export default function VerificationStatusPage() {
       <div style={styles.card}>
         {/* Header */}
         <div style={styles.header}>
-          <span style={styles.logo}>📊</span>
           <h1 style={styles.title}>Verification <span style={styles.highlight}>Status</span></h1>
           <p style={styles.subtitle}>Track your profile verification progress</p>
         </div>
@@ -99,7 +98,7 @@ export default function VerificationStatusPage() {
           color: badge.color,
           borderColor: badge.borderColor || 'transparent',
         }}>
-          <span style={styles.badgeIcon}>{badge.icon || '📌'}</span>
+          <span style={styles.badgeIcon}>{badge.icon}</span>
           {badge.label}
         </div>
 
@@ -133,7 +132,7 @@ export default function VerificationStatusPage() {
               </div>
               <div style={styles.stepContent}>
                 <span style={styles.stepName}>
-                  {step.icon} {step.name}
+                  {step.name}
                 </span>
                 <span style={step.completed ? styles.verified : styles.unverified}>
                   {step.completed ? 'Completed' : 'Pending'}
@@ -147,21 +146,21 @@ export default function VerificationStatusPage() {
         {status && (
           <div style={styles.infoContainer}>
             <div style={styles.infoRow}>
-              <span style={styles.infoLabel}>📞 Phone:</span>
+              <span style={styles.infoLabel}>Phone:</span>
               <span style={styles.infoValue}>{status.phone || 'Not provided'}</span>
               <span style={status.phone_verified ? styles.verified : styles.unverified}>
                 {status.phone_verified ? '✅ Verified' : '⏳ Pending'}
               </span>
             </div>
             <div style={styles.infoRow}>
-              <span style={styles.infoLabel}>✉️ Email:</span>
+              <span style={styles.infoLabel}>Email:</span>
               <span style={styles.infoValue}>{status.email || 'Not provided'}</span>
               <span style={status.email_verified ? styles.verified : styles.unverified}>
                 {status.email_verified ? '✅ Verified' : '⏳ Pending'}
               </span>
             </div>
             <div style={styles.infoRow}>
-              <span style={styles.infoLabel}>📄 Documents:</span>
+              <span style={styles.infoLabel}>Documents:</span>
               <span style={styles.infoValue}>{status.documents?.length || 0} uploaded</span>
               <span style={status.documents?.length > 0 ? styles.verified : styles.unverified}>
                 {status.documents?.length > 0 ? '✅ Uploaded' : '⏳ Pending'}
@@ -188,14 +187,14 @@ export default function VerificationStatusPage() {
               style={styles.btnSuccess}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-3px)';
-                e.currentTarget.style.boxShadow = `0 8px 30px rgba(34, 197, 94, 0.4)`;
+                e.currentTarget.style.boxShadow = `0 8px 30px rgba(66, 144, 94, 0.4)`;
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
                 e.currentTarget.style.boxShadow = `0 4px 20px rgba(34, 197, 94, 0.2)`;
               }}
             >
-              🎉 Go to Dashboard
+               Go to Dashboard
             </button>
           )}
 

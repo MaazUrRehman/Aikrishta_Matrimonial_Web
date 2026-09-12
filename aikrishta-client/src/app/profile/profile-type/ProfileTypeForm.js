@@ -625,7 +625,7 @@ export default function ProfileTypeForm() {
               style={styles.radio}
             />
             <div>
-              <h3 style={styles.optionTitle}>👤 Myself</h3>
+              <h3 style={styles.optionTitle}>Myself</h3>
               <p style={styles.optionDescription}>
                 I am creating my own matrimonial profile.
               </p>
@@ -656,7 +656,7 @@ export default function ProfileTypeForm() {
               style={styles.radio}
             />
             <div>
-              <h3 style={styles.optionTitle}>👨‍👩‍👧‍👦 Family Member</h3>
+              <h3 style={styles.optionTitle}>Family Member</h3>
               <p style={styles.optionDescription}>
                 I am creating this profile for a family member.
               </p>
