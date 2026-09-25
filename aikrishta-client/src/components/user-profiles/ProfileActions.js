@@ -526,7 +526,7 @@ export default function ProfileActions({
                   <span style={styles.dropdownIcon}>🎤</span>
                   Voice Call
                 </button>
-                <button
+                {/* <button
                   onClick={() => handleCallAction('Video Call')}
                   style={styles.dropdownItem}
                   onMouseEnter={(e) => {
@@ -538,7 +538,7 @@ export default function ProfileActions({
                 >
                   <span style={styles.dropdownIcon}>📹</span>
                   Video Call
-                </button>
+                </button> */}
               </div>
             )}
           </div>

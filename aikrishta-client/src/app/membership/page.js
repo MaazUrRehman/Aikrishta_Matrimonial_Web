@@ -3,18 +3,18 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Check, 
-  Crown, 
-  Star, 
-  Sparkles, 
-  Shield, 
-  Users, 
-  MessageCircle, 
-  Video, 
-  Phone, 
-  Eye, 
-  Zap, 
+import {
+  Check,
+  Crown,
+  Star,
+  Sparkles,
+  Shield,
+  Users,
+  MessageCircle,
+  Video,
+  Phone,
+  Eye,
+  Zap,
   Heart,
   TrendingUp,
   Award,
@@ -91,12 +91,12 @@ export default function MembershipPage() {
     },
   ];
 
-  const stats = [
-    { value: '95%', label: 'Success Rate' },
-    { value: '10K+', label: 'Premium Members' },
-    { value: '4.8★', label: 'User Rating' },
-    { value: '3X', label: 'More Matches' },
-  ];
+  // const stats = [
+  //   { value: '95%', label: 'Success Rate' },
+  //   { value: '10K+', label: 'Premium Members' },
+  //   { value: '4.8★', label: 'User Rating' },
+  //   { value: '3X', label: 'More Matches' },
+  // ];
 
   return (
     <div style={styles.pageContainer}>
@@ -112,7 +112,7 @@ export default function MembershipPage() {
               transition={{ duration: 0.6 }}
               style={styles.heroInner}
             >
-              <motion.span 
+              <motion.span
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
@@ -120,7 +120,7 @@ export default function MembershipPage() {
               >
                 ✦ Premium Membership
               </motion.span>
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
@@ -128,34 +128,26 @@ export default function MembershipPage() {
               >
                 Unlock Your <span style={styles.heroHighlight}>Perfect Match</span>
               </motion.h1>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
                 style={styles.heroDesc}
               >
-                Upgrade to premium and get access to exclusive features that help you 
+                Upgrade to premium and get access to exclusive features that help you
                 find your life partner faster and more efficiently
               </motion.p>
-              
+
               {/* Stats */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
                 style={styles.heroStats}
               >
-                {stats.map((stat, index) => (
-                  <motion.div 
-                    key={index} 
-                    style={styles.heroStat}
-                    whileHover={{ y: -4 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <span style={styles.heroStatValue}>{stat.value}</span>
-                    <span style={styles.heroStatLabel}>{stat.label}</span>
-                  </motion.div>
-                ))}
+                <span style={styles.heroDisclaimer}>
+                  This service is free for a limited time. Please do your due diligence before moving forward in a rishta.
+                </span>
               </motion.div>
             </motion.div>
           </div>
@@ -164,7 +156,7 @@ export default function MembershipPage() {
         {/* How It Works - With Animations */}
         <section style={styles.howItWorksSection}>
           <div style={styles.sectionHeader}>
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -172,7 +164,7 @@ export default function MembershipPage() {
             >
               ✦ How It Works
             </motion.span>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -180,7 +172,7 @@ export default function MembershipPage() {
             >
               Get Started in <span style={styles.sectionHighlight}>4 Easy Steps</span>
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -192,7 +184,7 @@ export default function MembershipPage() {
 
           <div style={styles.stepsGrid}>
             {howItWorks.map((step, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -205,14 +197,14 @@ export default function MembershipPage() {
                 onMouseLeave={() => setHoveredStep(null)}
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
               >
-                <motion.div 
+                <motion.div
                   style={styles.stepNumber}
                   animate={hoveredStep === index ? { scale: 1.1, color: COLORS.accent } : { scale: 1 }}
                   transition={{ duration: 0.3 }}
                 >
                   {step.step}
                 </motion.div>
-                <motion.div 
+                <motion.div
                   style={{
                     ...styles.stepIconWrapper,
                     ...(hoveredStep === index && styles.stepIconWrapperHover),
@@ -237,7 +229,7 @@ export default function MembershipPage() {
         {/* Plans Grid - With Selection */}
         <div style={styles.plansGrid}>
           {/* Free Plan - Selected by default */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -253,7 +245,7 @@ export default function MembershipPage() {
             cursor="pointer"
           >
             <div style={styles.planHeader}>
-              <motion.span 
+              <motion.span
                 style={styles.planIcon}
                 animate={hoveredPlan === 'free' || selectedPlan === 'free' ? { scale: 1.1, rotate: 5 } : { scale: 1, rotate: 0 }}
                 transition={{ duration: 0.3 }}
@@ -266,8 +258,8 @@ export default function MembershipPage() {
 
             <div style={styles.planFeatures}>
               {freeFeatures.map((feature, index) => (
-                <motion.div 
-                  key={index} 
+                <motion.div
+                  key={index}
                   style={styles.featureItem}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -279,7 +271,7 @@ export default function MembershipPage() {
               ))}
             </div>
 
-            <motion.button 
+            <motion.button
               style={{
                 ...styles.planBtn,
                 ...(selectedPlan === 'free' ? styles.planBtnSelected : styles.planBtnUnselected),
@@ -292,7 +284,7 @@ export default function MembershipPage() {
           </motion.div>
 
           {/* Premium Plan */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -308,7 +300,7 @@ export default function MembershipPage() {
             whileHover={{ y: -8, transition: { duration: 0.3 } }}
             cursor="pointer"
           >
-            <motion.div 
+            <motion.div
               style={styles.popularBadge}
               animate={hoveredPlan === 'premium' || selectedPlan === 'premium' ? { scale: 1.05 } : { scale: 1 }}
               transition={{ duration: 0.3 }}
@@ -316,9 +308,9 @@ export default function MembershipPage() {
               <Star size={14} />
               Most Popular
             </motion.div>
-            
+
             <div style={styles.planHeader}>
-              <motion.span 
+              <motion.span
                 style={styles.planIcon}
                 animate={hoveredPlan === 'premium' || selectedPlan === 'premium' ? { scale: 1.1, rotate: 5 } : { scale: 1, rotate: 0 }}
                 transition={{ duration: 0.3 }}
@@ -331,8 +323,8 @@ export default function MembershipPage() {
 
             <div style={styles.planFeatures}>
               {premiumFeatures.map((feature, index) => (
-                <motion.div 
-                  key={index} 
+                <motion.div
+                  key={index}
                   style={styles.featureItem}
                   initial={{ opacity: 0, x: 10 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -344,7 +336,7 @@ export default function MembershipPage() {
               ))}
             </div>
 
-            <motion.button 
+            <motion.button
               style={{
                 ...styles.planBtn,
                 ...(selectedPlan === 'premium' ? styles.planBtnSelected : styles.planBtnUnselected),
@@ -361,7 +353,7 @@ export default function MembershipPage() {
         {/* Premium Benefits - With Animations */}
         <section style={styles.benefitsSection}>
           <div style={styles.sectionHeader}>
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -369,7 +361,7 @@ export default function MembershipPage() {
             >
               ✦ Premium Benefits
             </motion.span>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -377,7 +369,7 @@ export default function MembershipPage() {
             >
               What You <span style={styles.sectionHighlight}>Get</span>
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -389,7 +381,7 @@ export default function MembershipPage() {
 
           <div style={styles.benefitsGrid}>
             {premiumBenefits.map((benefit, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -402,7 +394,7 @@ export default function MembershipPage() {
                 onMouseLeave={() => setHoveredBenefit(null)}
                 whileHover={{ x: 6, transition: { duration: 0.3 } }}
               >
-                <motion.span 
+                <motion.span
                   style={styles.benefitCheck}
                   animate={hoveredBenefit === index ? { scale: 1.2 } : { scale: 1 }}
                   transition={{ duration: 0.3 }}
@@ -415,7 +407,7 @@ export default function MembershipPage() {
           </div>
         </section>
 
-       
+
       </main>
       <Footer />
     </div>
@@ -865,13 +857,22 @@ const styles = {
     fontSize: TYPOGRAPHY.fontSize.sm,
     color: 'rgba(255,255,255,0.3)',
   },
+  heroDisclaimer: {
+  fontSize: '14px',
+  color: 'rgba(255,255,255,0.6)',
+  textAlign: 'center',
+  lineHeight: 1.6,
+  maxWidth: '800px',
+  margin: '0 auto',
+  fontFamily: TYPOGRAPHY.fontFamily.body,
+},
 };
 
 // Add Search icon for free features
 const Search = ({ size }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="11" cy="11" r="8"/>
-    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    <circle cx="11" cy="11" r="8" />
+    <line x1="21" y1="21" x2="16.65" y2="16.65" />
   </svg>
 );
 

@@ -45,18 +45,7 @@ export default function HeroSection({ user }) {
 
           <div className="stats" style={styles.stats}>
             <div style={styles.statItem}>
-              <span style={styles.statNumber}>50K+</span>
-                <span style={styles.statLabel}>Successful relationships</span>
-            </div>
-            <div className="stat-divider" style={styles.statDivider}></div>
-            <div style={styles.statItem}>
-              <span style={styles.statNumber}>15K+</span>
-                <span style={styles.statLabel}>Members finding love</span>
-            </div>
-            <div className="stat-divider" style={styles.statDivider}></div>
-            <div style={styles.statItem}>
-              <span style={styles.statNumber}>15+</span>
-                <span style={styles.statLabel}>Years of trust</span>
+                <span style={styles.statLabel}>This service is free for a limited time. Please do your due <br></br> diligence before moving forward in a rishta.</span>
             </div>
           </div>
         </div>
@@ -309,7 +298,7 @@ const styles = {
 
   statLabel: {
     fontFamily: TYPOGRAPHY.fontFamily.body,
-    fontSize: TYPOGRAPHY.fontSize.xs,
+    fontSize: TYPOGRAPHY.fontSize.md,
     color: 'rgba(255,255,255,0.5)',
     marginTop: SPACING[0.5],
   },

@@ -29,12 +29,6 @@ export default function AIMatchHero({ onFetchMatches, loading, hasFetched }) {
     },
   ];
 
-  const stats = [
-    { value: '95%', label: 'Match Accuracy' },
-    { value: '50K+', label: 'Successful Matches' },
-    { value: '4.8★', label: 'User Rating' },
-    { value: '10K+', label: 'Happy Members' },
-  ];
 
   return (
     <section style={styles.section}>
