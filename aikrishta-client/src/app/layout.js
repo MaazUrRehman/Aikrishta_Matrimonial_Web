@@ -1,10 +1,14 @@
 import "./globals.css";
+import Script from "next/script";
 import Providers from "@/providers/Providers";
 import ProtectedRoute from "@/components/common/ProtectedRoute";
 import IncomingVoiceCall from "@/components/user-profiles/IncomingVoiceCall";
 import IncomingVideoCallModal from "@/components/user-profiles/IncomingVideoCallModal";
 
 export const metadata = {
+  verification: {
+    google: "hnaLNk2xQ8xxrlPoJLXayF-uzOkdG8uPi2UEelYPdmg",
+  },
   title: {
     default: "AIKRISHTA | Find Your Perfect Life Partner",
     template: "%s | AIKRISHTA",
@@ -64,6 +68,16 @@ export default function RootLayout({ children }) {
           <IncomingVideoCallModal />
 
         </Providers>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-V3RR7N23DR"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-V3RR7N23DR');`}
+        </Script>
       </body>
     </html>
   );
