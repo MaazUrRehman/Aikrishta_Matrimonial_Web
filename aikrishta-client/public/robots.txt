@@ -1,0 +1,10 @@
+
+User-agent: *
+Allow: /
+
+
+Disallow: /auth/register
+Disallow: /auth/login
+
+
+Sitemap: https://aikrishta.com/sitemap.xml
